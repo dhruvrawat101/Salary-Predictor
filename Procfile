@@ -1,1 +1,1 @@
-web:gunicorn app:home
+web: app:home.html
