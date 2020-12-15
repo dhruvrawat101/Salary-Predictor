@@ -51,7 +51,7 @@ def home():
         data6=1
 
 
-
+    count=0
     for x in range(4):
         if(data7=="python_job"):
             count=1
@@ -67,6 +67,7 @@ def home():
         data8=0
         data9=0
         data10=0
+    
     if(count==2):
         data7=1
         data8=1
