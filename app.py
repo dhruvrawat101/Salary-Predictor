@@ -17,14 +17,14 @@ def gh():
 def home():
     data1 = request.get_data('rating')
     data2 = request.get_data('age')
-    data3 = request.get_data('role1')
-    data4 = request.get_data('role2')
-    data5 = request.get_data('role3')
-    data6 = request.get_data('role4')
-    data7 = request.get_data('skill1')
-    data8 = request.get_data('skill2')
-    data9 = request.get_data('skill3')
-    data10 =request.get_data('skill4')
+    data3 = request.get_data('a')
+    data4 = request.get_data('b')
+    data5 = request.get_data('c')
+    data6 = request.get_data('d')
+    data7 = request.get_data('e')
+    data8 = request.get_data('f')
+    data9 = request.get_data('g')
+    data10 =request.get_data('h')
 
     if(data3=="Data Scientist"):
         data3=1
