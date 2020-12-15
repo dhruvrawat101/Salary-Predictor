@@ -1,41 +1,125 @@
-<!-- @format -->
-
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<style>
-			body {
-				background-color: aqua;
-			}
-		</style>
-		<title>Test 1</title>
-	</head>
-	<body>
-		<center>
-			<h1>Testing Predictions</h1>
-		</center>
-		
-		<br><br>
+  <head>
+    <!Tailwindcss>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./main.css" />
 
-	 <form method="POST", action="{{url_for('home')}}">
-           <b> 1st value :  <input type="text", name='a', placeholder="enter 1"> <br><br>
-            2nd value :  <input type="text", name='b', placeholder="enter 2"> <br><br>
-            3rd value :  <input type="text", name='c', placeholder="enter 3"> <br><br>
-			4th value : <input type="text", name='d', placeholder="enter 4"> <br><br>
-			5th value: <input type="text", name='e', placeholder="enter 5"> <br><br>
-			6th value : <input type="text", name='f', placeholder="enter 6"> <br><br>
-			7th value : <input type="text", name='g', placeholder="enter 7"> <br><br>
-			8th value : <input type="text", name='h', placeholder="enter 8"> <br><br>
-			9th value : <input type="text", name='i', placeholder="enter 9"> <br><br>
-			10th value : <input type="text", name='j', placeholder="enter 10"> <br><br>
-			11th value : <input type="text", name='k', placeholder="enter 11"> <br><br>  <br><br>
-	
-            <input type="submit" , value='predict!' >
-        </form>
+  
+    <title>Salary Prediction</title>
+  </head>
+  <body>
+   
+
+    <!LANDIGN PAGE>
+    <section class="text-gray-700 body-font">
+      <div
+        class="container mx-auto flex px-5 py-24 items-center justify-center flex-col"
+      >
+        <img
+          class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
+          alt="hero"
+          src="https://source.unsplash.com/720x600/?data,programming,business,"
+        />
+        <div class="text-center lg:w-2/3 w-full">
+          <h1
+            class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"
+          >
+            DATA SCIENTIST SALARY PREDICTION
+          </h1>
+          <p class="mb-8 leading-relaxed">
+            Predict your salary using our MACHINE LEARNING model!
+          </p>
+          <div class="flex justify-center">
+            <a href="#machineLearning">
+              <button
+                class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+              >
+                Predict
+              </button></a
+            >
+          </div>
+        </div>
+        <div
+          class="text-center lg:w-2/3 w-full machineLearning"
+          id="machineLearning"
+        >
+
+        <!INPUTS FIELDS>
+
+          <form>
+            <div class="form-group">
+             
+              
+                <input
+                  type="number"
+                  class="form-control"
+                  name="rating"
+                  placeholder="Enter Company's Rating"
+                />
+              </div>
+              <div class="form-group">
+              <br><br>
+
+                <input
+                  type="number"
+                  class="form-control"
+                  name="age"
+                  placeholder="Enter Company's Age"
+                />
+              </div>
 
 
 
+              <div class="form-group">
+                <br> <br>
+           <select class="form-control"  class="custom-control custom-checkbox">
+             <option selected>Select Role</option>
+             <option value="Data Scientist" name="role1">Data Scientist</option>
+             <option value="Data Analyst" name="role2">Data Analyst</option>
+             <option value="Data Engineering" name="role3">Data Engineering</option>
+             <option value="Other" name="role4">Other</option>
+           </select>
+         </div>
 
 
-	</body>
+            <div id="one" class="form-group .form-check container" >
+                   <br> <br>
+                   <h4>Select Job Requirements </h4>
+                     
+            <div class="checkbox" class="form-control">
+              <label><input class="form-check-input" type="checkbox" value="python_job" name="skill1" checked>Python</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="form-check-input" type="checkbox" value="excel_job" name="skill2">Excel</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="form-check-input" type="checkbox" value="sql_job" name="skill3">SQL</label>
+            </div>
+            <div class="checkbox">
+              <label><input class="form-check-input" type="checkbox" value="tableau_job" name="skill4">Tableau</label>
+            </div>
+          </div>
+
+            
+              </div>
+            </div >
+            <div id="two" class="form-control form-group">
+            <button  type="submit" class="btn btn-primary"> Submit</button>
+          </div>
+          </form>
+        </div>
+      </div>
+  
+  
+  </body>
 </html>
