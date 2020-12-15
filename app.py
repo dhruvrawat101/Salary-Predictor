@@ -72,20 +72,19 @@ def home():
         data9=0
         data10=0
 
-if(count==3):
+    if(count==3):
         data7=1
         data8=1
         data9=1
         data10=0
 
-if(count==4):
+    if(count==4):
         data7=1
         data8=1
         data9=1
         data10=1
 
-
-    arr = np.array([[data1,data2,data3,data4,data5,data6,data7,data8,data9,data10]])
+    arr = np.array([[data1, data2, data3, data4, data5, data6, data7, data8, data9, data10]])
     pred = model.predict(arr)
     return render_template('after.html', data=pred)
 
