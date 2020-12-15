@@ -14,17 +14,17 @@ def gh():
 
 @app.route('/predict', methods=['POST'])
 def home():
-    data1 = request.form['rating', False]
-    data2 = request.form['age'], False
-    data3 = request.form['role1', False]
-    data4 = request.form['role2', False]
-    data5 = request.form['role3', False]
-    data6 = request.form['role4', False]
-    data7 = request.form['skill1', False]
-    data8 = request.form['skill2', False]
-    data9 = request.form['skill3', False]
-    data10 = request.form['skill4', False]
-   
+    data1 = request.get_data('rating')
+    data2 = request.get_data('age')
+    data3 = request.get_data('role1')
+    data4 = request.get_data('role2')
+    data5 = request.get_data('role3')
+    data6 = request.get_data('role4')
+    data7 = request.get_data('skill1')
+    data8 = request.get_data('skill2')
+    data9 = request.get_data('skill3')
+    data10 =request.get_data('skill4')
+
     if(data3=="Data Scientist"):
         data3=1
         data4=0
