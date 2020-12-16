@@ -14,7 +14,7 @@ def predict():
     '''
     For rendering results on HTML GUI
     '''
-    int_features = [int(x) for x in request.get_data()]
+    int_features = [int(x) for x in request.form()]
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
 
