@@ -23,7 +23,7 @@ def predict():
         return render_template('after.html', data=output)
 
     else:
-        return render_template(after.html', data=0)
+        return render_template(after.html', data="bad luck")
 
 if __name__ == "__main__":
     app.run(debug=True)
