@@ -16,7 +16,7 @@ def gh():
 @app.route('/predict', methods=['POST'])
 def home():
     data1 = request.get_data('rating')
-    data2 = request.get_data('age'))
+    data2 = request.get_data('age')
     data3 = request.get_data('a')
     data4 = request.get_data('b')
     data5 = request.get_data('c')
@@ -86,8 +86,8 @@ def home():
         data9=1
         data10=1
 
-    data1=float(data1)
-    data2=int(data2)
+   # data1=float(data1)
+    #data2=int(data2)
     arr = np.array([[data1, data2, data3, data4, data5, data6, data7, data8, data9, data10]])
     pred = model.predict(arr)
     return render_template('after.html', data=pred)
