@@ -13,7 +13,7 @@ def gh():
     return render_template('home.html')
 
 
-@app.route('/predict', methods=['GET'])
+@app.route('/predict', methods=['POST'])
 def home():
     data1 = request.get_data('rating')
     data2 = request.get_data('age')
