@@ -19,7 +19,7 @@ def predict():
     prediction = model.predict(final_features)
 
     output = round(prediction[0], 2)
-    return render_template('after.html', data=pred)
+    return render_template('after.html', data=output)
 
 
 if __name__ == "__main__":
