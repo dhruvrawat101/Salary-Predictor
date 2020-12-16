@@ -12,14 +12,15 @@
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./dhruv.css" />
 
   
     <title>Salary Prediction</title>
   </head>
   <body>
-   
-
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+ 
     <!LANDIGN PAGE>
     <section class="text-gray-700 body-font">
       <div
@@ -48,22 +49,24 @@
               </button></a
             >
           </div>
-        </div>
+       
+
+      </div></div>
         <div
           class="text-center lg:w-2/3 w-full machineLearning"
           id="machineLearning"
         >
-
+             
         <!INPUTS FIELDS>
 
-          <form method="POST", action="{{url_for('home')}}">
+          <form>
             <div class="form-group">
              
               
                 <input
                   type="number"
                   class="form-control"
-                  name="rating"
+                  id="rating"
                   placeholder="Enter Company's Rating"
                 />
               </div>
@@ -73,7 +76,7 @@
                 <input
                   type="number"
                   class="form-control"
-                  name="age"
+                  id="age"
                   placeholder="Enter Company's Age"
                 />
               </div>
@@ -84,28 +87,29 @@
                 <br> <br>
            <select class="form-control"  class="custom-control custom-checkbox">
              <option selected>Select Role</option>
-             <option value="DataScientist" name="a">Data Scientist</option>
-             <option value="DataAnalyst" name="b">Data Analyst</option>
-             <option value="DataEngineering" name="c">Data Engineering</option>
-             <option value="Other" name="d">Other</option>
+             <option value=1>Data Scientist</option>
+             <option value=1>Data Analyst</option>
+             <option value=1>Data Engineering</option>
+             <option value=1>Other</option>
            </select>
          </div>
 
-            <div id="one" class="form-group .form-check container" >
+
+            <div id="one" class="form-group  container" >
                    <br> <br>
-                   <h4>Select Job Requirements </h4>
+                   <h4>Select Skills</h4>
                      
-            <div class="checkbox" class="form-control">
-              <label><input class="form-check-input" type="checkbox" name="e" checked>Python</label>
+            <div class="checkbox" class="form-control" class='form-check form-check-inline'>
+              <label><input class="form-check-input" type="checkbox" value=1 >Python</label>
             </div>
-            <div class="checkbox">
-              <label><input class="form-check-input" type="checkbox"  name="f">Excel</label>
+            <div class="checkbox" class="form-check form-check-inline">
+              <label><input class="form-check-input" type="checkbox" value=1>Excel</label>
             </div>
-            <div class="checkbox">
-              <label><input class="form-check-input" type="checkbox" name="g">SQL</label>
+            <div class="checkbox" class="form-check form-check-inline">
+              <label><input class="form-check-input" class="form-check form-check-inline" type="checkbox" value=1>SQL</label>
             </div>
-            <div class="checkbox">
-              <label><input class="form-check-input" type="checkbox"  name="h">Tableau</label>
+            <div class="checkbox" class="form-check form-check-inline">
+              <label><input class="form-check-input" class="form-check form-check-inline" type="checkbox" value=1>Tableu</label>
             </div>
           </div>
 
@@ -119,13 +123,6 @@
         </div>
       </div>
   
-      <!
-      IGNORE IF NO ERROR (Comments )
-  before change in checkbox name thing
-   <div class="checkbox">
-    <label><input class="form-check-input" type="checkbox" value="excel_job" name="skill2">Excel</label>
-  </div>
-  >
   
   </body>
 </html>
