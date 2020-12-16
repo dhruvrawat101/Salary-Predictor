@@ -9,22 +9,18 @@ model = pickle.load(open('model.pkl', 'rb'))
 def home():
     return render_template('home.html')
 
-@app.route('/predict',methods=['GET', 'POST'])
+@app.route('/predict',methods=['POST'])
 def predict():
     '''
     For rendering results on HTML GUI
     '''
-    if request.method == 'POST':
-        int_features = [int(x) for x in request.form.values()]
-        final_features = [np.array(int_features)]
-        prediction = model.predict(final_features)
+    int_features = [int(x) for x in request.get_data()]
+    final_features = [np.array(int_features)]
+    prediction = model.predict(final_features)
 
-        output = round(prediction[0], 2)
-        return render_template('after.html', data=output)
+    output = round(prediction[0], 2)
 
-    else:
-       # return render_template(after.html', data="bad luck")
-        return render_template('after.html')
+    return render_template('after.html', data=output)
 
 if __name__ == "__main__":
     app.run(debug=True)
