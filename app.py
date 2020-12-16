@@ -26,19 +26,19 @@ def home():
     data9 = request.get_data('g')
     data10 =request.get_data('h')
 
-    if(data3=="Data Scientist"):
+    if(data3=="DataScientist"):
         data3=1
         data4=0
         data5=0
         data6=0
     
-    elif(data2=="Data Analyst"):
+    elif(data2=="DataAnalyst"):
         data3=0
         data4=1
         data5=0
         data6=0
 
-    elif(data3=="Data Engineering"):
+    elif(data3=="DataEngineering"):
         data3=0
         data4=0
         data5=1
