@@ -86,7 +86,7 @@ def home():
         data9=1
         data10=1
 
-    data1=float(data1)
+    #data1=float(data1)
     data2=int(data2)
     arr = np.array([[data1, data2, data3, data4, data5, data6, data7, data8, data9, data10]])
     pred = model.predict(arr)
