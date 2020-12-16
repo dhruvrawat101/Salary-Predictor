@@ -15,7 +15,8 @@ def gh():
 
 @app.route('/predict', methods=['POST'])
 def home():
-    data1 = float(request.get_data('rating'))
+    data = request.get_data('rating')
+    data1= float(data)
     data2 = float(request.get_data('age'))
     data3 = request.get_data('a')
     data4 = request.get_data('b')
