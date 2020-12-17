@@ -86,9 +86,7 @@ def predict():
         data10=1
 
     arr = np.array([[data1, data2, data3, data4, data5, data6, data7, data8, data9, data10]])
-    pred = model.predict(arr)
-    #pred = round(pred,2)
-    pred =  int(pred)
+    pred = round(model.predict(arr),2)
     return render_template('after.html', data=pred)
 
 if __name__ == "__main__":
